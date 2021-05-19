@@ -13,8 +13,6 @@ ssh -o StrictHostKeyChecking=no -i $PATH_SECRET_KEY $MACHINE_DESTINATION 'sudo a
 #On crée le répertoire /app sur la machine distante
 ssh -o StrictHostKeyChecking=no -i $PATH_SECRET_KEY $MACHINE_DESTINATION 'sudo mkdir -p /app && sudo chmod -R 777 /app && sudo chown ec2-user /app
 
-#On copie le fichier .class dans le dossier homedir de l'utilisateur (car on n'arrive pas à l'envoyer directement sur /app)
-#possible de faire dans un dossier temporaire
 scp -o StrictHostKeyChecking=no -i $PATH_SECRET_KEY helloWorld.class $MACHINE_DESTINATION:/home/ec2-user/helloWorld.class
 
 #On copie le fichier .class dans le dossier /app localement 
