@@ -1,5 +1,5 @@
- ---
- - name: Deploy Java program
+---
+- name: Deploy Java program
   hosts: all
   become: yes
 
@@ -45,4 +45,3 @@
       register: result
     - debug:
         var=result
-
