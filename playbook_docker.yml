@@ -1,5 +1,5 @@
  ---
-- name: Deploy Java program
+ -name: Deploy Java program
   hosts: all
   become: yes
 
